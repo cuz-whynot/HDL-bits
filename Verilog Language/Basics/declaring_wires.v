@@ -10,7 +10,7 @@ module top_module(
     wire w_1, w_2, w_3;
     assign w_1 = a & b;
     assign w_2 = c & d;
-    assign w_3 = w_1 | w_2;         // used intermediate wire for modularity 
+    assign w_3 = w_1 | w_2;         
     assign out = w_3;
     assign out_n = ~(w_3);
 endmodule
