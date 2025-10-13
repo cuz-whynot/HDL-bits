@@ -1,0 +1,5 @@
+In this module, net type wire is extensively used. 
+In Verilog, the wire data type is a net type used to model connections between different parts of a digital circuit. Think of it as a literal electrical wire on a circuit board 
+or inside a chip. Its primary characteristic is that it cannot store a value. Instead, it must be continuously driven by the output of a gate, a module instance, or a continuous 
+assign statement. If a wire is not connected to a driver, its value is 'z', which represents a high-impedance (floating) state. 
+Another net type which is very prevalent is reg, this net type can store values and is analogous to flip-flops or memory bits. I is mostly used in always or initial blocks.
