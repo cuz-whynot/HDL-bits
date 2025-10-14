@@ -3,4 +3,14 @@ Little Endian: least significant bit has given lower index. ex: [3:0].
 Big Endian: least significant bit has given higher index. ex: [0:3].
 
 Bitwise operator and logical operator.
+If a vector has a non-zero value, it is considered as true. (1)
+If a vector has a zero value, it is considered as true. (0)
+ex: for, out_or_logical = a || b, out_or_logical would be a 1 bit value which would be 1 for any non-zero values of a and b but,  
+for, out_or_bitwise = a | b, if a is 10001000 and b is 10010001, out_or_bitwise would be a 8-bit vector of value 10011001.
+ex: for a = 0011, ~a = 1100 and !a = 0.
+
+Operators  Logical  Bitwise
+AND          &&        &
+OR           ||        |
+NOT          !         ~
 
