@@ -1,0 +1,2 @@
+Little Endian: least significant bit has given lower index. ex: [3:0].
+Big Endian: least significant bit has given higher index. ex: [0:3].
