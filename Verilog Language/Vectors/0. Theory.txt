@@ -2,9 +2,14 @@ Endian: Direction of a vector.
 Little Endian: least significant bit has given lower index. ex: [3:0].
 Big Endian: least significant bit has given higher index. ex: [0:3].
 
-Bitwise operator and logical operator.
+Part select
+you can select a specific chunk of vector which seems to relevant in a particular problem statement
+Ex: 
+assign out[7:0] = in[15:8], where in is of 8 bit and out is of 16 bits
+
+Bitwise operator and logical operator
 If a vector has a non-zero value, it is considered as true. (1)
-If a vector has a zero value, it is considered as true. (0)
+If a vector has a zero value, it is considered as false. (0)
 ex: for, out_or_logical = a || b, out_or_logical would be a 1 bit value which would be 1 for any non-zero values of a and b but,  
 for, out_or_bitwise = a | b, if a is 10001000 and b is 10010001, out_or_bitwise would be a 8-bit vector of value 10011001.
 ex: for a = 0011, ~a = 1100 and !a = 0.
@@ -14,3 +19,16 @@ AND          &&        &
 OR           ||        |
 NOT          !         ~
 
+Concatenation
+Ex:
+{3'b111, 3'b000} => 6'b111000
+{1'b1, 1'b0, 3'b101} => 5'b10101
+{4'ha, 4'd10} => 8'b10101010
+
+Replication
+{num{vector}}
+Ex:
+{5{1'b1}}           // 5'b11111 (or 5'd31 or 5'h1f)
+{2{a,b,c}}          // The same as {a,b,c,a,b,c}
+{3'd5, {2{3'd6}}}   // 9'b101_110_110. It's a concatenation of 101 with
+                    // the second vector, which is two copies of 3'b110.
