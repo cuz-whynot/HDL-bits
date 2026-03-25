@@ -3,6 +3,5 @@ module top_module(
     input b,
     input c,
     output out  ); 
-    
-    assign out = (a*~b*~c) + (a*~b*c) + (a*b*c) + (a*b*~c) + (~a*b*c) + (~a*~b*c) + (~a*b*~c); 
+    assign out = a | (~a & c) | (~a & b);
 endmodule
