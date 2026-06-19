@@ -6,9 +6,7 @@ module top_module (
     always@(posedge clk) begin
         if(reset) q<= 3'h0;
         else begin
-            for(i=0;i<16; i = i+1) begin
                 q <= q + 3'h1;
-            end
         end
     end
 endmodule
